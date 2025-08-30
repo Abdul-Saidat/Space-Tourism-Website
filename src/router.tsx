@@ -1,6 +1,6 @@
 import { createHashRouter } from "react-router-dom";
 import { Layout } from "./layouts/layout";
-import { Home } from "./pages/home";
+import { Home } from "./pages/Home";
 import { Crew } from "./pages/Crew";
 import { Destination } from "./pages/Destination";
 import { Technology } from "./pages/Technology"
@@ -16,7 +16,7 @@ export const router = createHashRouter([
                 element: <Home/>
             },
             {
-                path: "/home",
+                path: "/Home",
                 element: <Home/>
             },
              {

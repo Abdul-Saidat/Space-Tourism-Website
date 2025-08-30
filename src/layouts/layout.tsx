@@ -27,11 +27,11 @@ export const Layout = () => {
   const location = useLocation();
   console.log(location.pathname);
 
-  const path = location.pathname === "/" ? "/home" : location.pathname;
+  const path = location.pathname === "/" ? "/Home" : location.pathname;
   console.log("current path", path);
 
   const backgrounds: Record<string, BackgroundSet> = {
-    "/home": {
+    "/Home": {
       desktop: DesktopHomebg,
       tablet: TabletHomeBg,
       mobile: MobileHomeBg,
@@ -72,7 +72,7 @@ export const Layout = () => {
   }, []);
 
   const bgImage =
-    backgrounds[path]?.[screenSize] || backgrounds["home"].desktop;
+    backgrounds[path]?.[screenSize] || backgrounds["Home"].desktop;
 
   return (
     <>
@@ -95,7 +95,7 @@ export const Layout = () => {
               className={` hidden lg:block lg:w-[38rem] md:block md:w-[39rem] md:mt-0 h-20 lg:mt-10 float-right ${
                 location.pathname === "/"
                   ? `backdrop-blur-2xl  `
-                  : location.pathname === "/home"
+                  : location.pathname === "/Home"
                   ? ` lg:backdrop-blur-2xl lg:bg-transparent md:bg-[#191c27] `
                   : location.pathname === "/Crew"
                   ? "backdrop-blur-3xl bg-[#252831]"
@@ -112,7 +112,7 @@ export const Layout = () => {
                 <ul className="h-20 list-none flex items-center justify-end gap-10 mr-13">
                   {/* isActive ? `border-b-2 border-white after:underline-offset-8` : `border-b-2 border-transparent` */}
                   <NavLink
-                    to="/home"
+                    to="/Home"
                     className={({ isActive }) =>
                       `relative
                     after:content-['']
