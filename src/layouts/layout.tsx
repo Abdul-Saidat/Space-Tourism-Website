@@ -77,7 +77,7 @@ export const Layout = () => {
   return (
     <>
       <section
-        className={`w-full h-[150vh] lg:w-full lg:h-[140vh] md:w-full md:h-[200vh]          
+        className={`w-full h-[140vh] lg:w-full lg:h-[140vh] md:w-full md:h-[200vh]          
             `}
         style={{
           backgroundImage: `url(${bgImage})`,

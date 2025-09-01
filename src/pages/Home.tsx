@@ -1,7 +1,11 @@
-// import DesktopHomebg from "../assets/DesktopHomebg.jpg";
-// const bgs = {desktop: DesktopHomebg}
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/Destination");
+  };
+
   return (
     <>
       <section className="w-full">
@@ -24,7 +28,10 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <button className="bg-white text-black text-2xl w-[12rem] h-[12rem] rounded-full mt-[5rem] md:mt-[5rem] lg:mt-18">
+            <button
+              onClick={handleClick}
+              className="bg-white text-black text-2xl w-[12rem] h-[12rem] rounded-full mt-[5rem] md:mt-[5rem] lg:mt-18"
+            >
               EXPLORE
             </button>
           </div>
