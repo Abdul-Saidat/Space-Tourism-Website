@@ -12,10 +12,9 @@ import MobileDestinationBg from "../assets/mobile-images/destination-bg.jpg";
 import MobileTechnologyBg from "../assets/mobile-images/technology-bg.jpg";
 import logo from "../assets/logo.svg";
 import { NavLink, useLocation } from "react-router-dom";
+import { Navbar } from "../components/mobile-navbar";
 import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import { Home } from "../pages/Home";
-// import type { Crew } from "../pages/Crew";
 
 export const Layout = () => {
   type BackgroundSet = {
@@ -89,8 +88,9 @@ export const Layout = () => {
             <img
               src={logo}
               alt="website logo"
-              className="w-[40px] h-[40px] ml-10 lg:mt-10 md:mt-2"
+              className="w-[40px] h-[40px] mt-10 mx-8 ml-10 lg:mt-10 md:mt-2"
             />
+            <Navbar />
             <div
               className={` hidden lg:block lg:w-[38rem] md:block md:w-[39rem] md:mt-0 h-20 lg:mt-10 float-right ${
                 location.pathname === "/"

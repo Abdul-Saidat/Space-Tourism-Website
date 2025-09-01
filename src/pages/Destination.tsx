@@ -3,6 +3,7 @@ import Moon from "../assets/destination-images/image-moon.png";
 import Mars from "../assets/destination-images/image-mars.png";
 import Europa from "../assets/destination-images/image-europa.png";
 import Titan from "../assets/destination-images/image-titan.png";
+// import { Navbar } from "../components/mobile-navbar";
 
 interface DestinationNavProps {
   name: string;
@@ -64,7 +65,7 @@ export const Destination = () => {
         </header>
         <div className="flex flex-col md:text-center lg:text-left lg:flex-row justify-between lg:w-[900px] mx-auto my-[130px] ">
           <div className=" w-[230px] mx-auto lg:w-[400px] md:w-[300px] md:mx-auto relative bottom-15 lg:initial lg:bottom-0 lg:mx-0">
-            <img src={content.image} alt="" />
+            <img src={content.image} className="" alt="destination images" />
           </div>
           <div className="flex flex-col mx-auto gap-[25px] justify-between md:mx-auto lg:mx-0">
             <div className="mx-auto md:w-[280px]  md:mx-auto lg:mx-0">
