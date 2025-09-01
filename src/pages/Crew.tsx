@@ -61,7 +61,7 @@ export const Crew = () => {
             </div>
             <div className="mx-auto">
               <ul className="flex justify-evenly w-[150px] h-[50px]">
-                {data.map((item, index) => {
+                {data.map((_item, index) => {
                   return (
                     <li
                       key={index}
@@ -71,8 +71,10 @@ export const Crew = () => {
                           : "bg-[#383844] border border-transparent"
                       }`}
                       onClick={() => setActiveIndex(index)}
-                    >
-                      {/* {item.name} */}
+                      >
+                      
+                      
+                      
                     </li>
                   );
                 })}
