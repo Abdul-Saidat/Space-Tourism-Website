@@ -76,7 +76,7 @@ export const Navbar = () => {
                     `
                     }
                   >
-                    <span className="mr-2 font-extraboldt-">01</span> DESTINATION
+                    <span className="mr-2 font-extrabold">01</span> DESTINATION
                   </NavLink>
                 </li>
 
