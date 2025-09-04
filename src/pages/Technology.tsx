@@ -56,9 +56,9 @@ export const Technology = () => {
   const content = data[activeIndex];
   return (
     <>
-      <section>
-        <header className="text-xl mx-20 mt-15 md:mx-15  lg:mt-0">
-          <span className="text-[#454751] font-bold mr-2"> 03</span> SPACE LAUNCH 101
+      <section className="lg:py-10">
+        <header className="text-xl mx-15 mt-15 md:mx-15  lg:mt-0 lg:mx-35 lg:text-[30px] tracking-[0.3rem] font-['BarlowCondensed']">
+          <span className="text-[#454751] font-extrabold mr-3"> 03</span> SPACE LAUNCH 101
         </header>
         <section className="flex flex-col mt-[100px] md:my-[100px] md:mt-15 lg:mt-0 lg:my-0 lg:flex-row lg:justify-between">
           <img
@@ -85,12 +85,12 @@ export const Technology = () => {
               })}
             </div>
             <div className="w-[330px] mx-auto text-center md:w-[520px] lg:text-left lg:w-[450px] md:ml-[45px] ">
-              <p className="text-xl text-[#7d7e89] mt-10 lg:mt-0">
+              <p className="text-xl text-[#7d7e89] mt-10 lg:mt-0 font-['Bellefair']">
                 THE TERMINOLOGY...
               </p>
               <div className="py-5 mx-1">
-                <p className="text-4xl"> {content.name}</p>
-                <p className="py-8 leading-7 text-center lg:text-left">
+                <p className="text-4xl font-['Bellefair']"> {content.name}</p>
+                <p className="py-8 leading-loose text-center lg:text-left font-['Barlow']">
                   {" "}
                   {content.description}{" "}
                 </p>

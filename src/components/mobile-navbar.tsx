@@ -1,7 +1,7 @@
 import { useState } from "react";
 import hamburger from "../assets/icon-hamburger.svg";
 import closebtn from "../assets/icon-close.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,29 +16,116 @@ export const Navbar = () => {
     <>
       <div className="relative md:hidden">
         {!isOpen && (
-          <button className="top-0 right-10" onClick={handleClick}>
-            <img src={Hamburger} alt="menu" />
+          <button className="" onClick={handleClick}>
+            <img
+              src={Hamburger}
+              className="w-[28px] relative right-10 top-6"
+              alt="menu"
+            />
           </button>
         )}
         {isOpen && (
-          <div className="z-50 w-[250px] h-[1000px] absolute right-[0px] text-white backdrop-blur-2xl">
+          <div className="z-50 w-[250px] h-[1050px] absolute mt-[-39px] right-[0px] text-white backdrop-blur-2xl">
             <button className="absolute top-6 right-4" onClick={handleClose}>
               <img src={closebtn} alt="close-button" />
             </button>
 
             <nav>
-              <ul className=" flex flex-col gap-8 mt-[150px] ml-10">
-                <li className="before:content-['00'] before:mr-2 cursor-pointer">
-                  <Link to={"/Home"}>Home</Link>
+              <ul className=" flex flex-col gap-4 mt-[150px] ml-10 font-['BarlowCondensed'] tracking-widest">
+                <li>
+                  <NavLink
+                    to="/Home"
+                    className={({ isActive }) =>
+                      `relative inline-block px-1 py-2
+                    after:content-['']
+                    after:block
+                    after:left-0
+                    after:w-full
+                    after:h-[2px]
+                    after:absolute
+                    after:bottom-[-3px]
+                  after:bg-white
+                    after:transition-all
+                    after:duration-300
+                    after:scale-x-0
+                    after:origin-left
+    ${isActive ? "after:scale-x-100" : ""}
+                    `
+                    }
+                  >
+                    <span className="mr-2">00</span> HOME
+                  </NavLink>
                 </li>
-                <li className="before:content-['01'] before:mr-2 cursor-pointer">
-                  <Link to={"/Destination"}>Destination</Link>
+                <li>
+                  <NavLink
+                    to="/Destination"
+                    className={({ isActive }) =>
+                      `relative inline-block px-1 py-2
+                    after:content-['']
+                    after:block
+                    after:w-full
+                    after:h-[2px]
+                    after:absolute
+                    after:bottom-[-3px]
+                  after:bg-white
+                    after:transition-all
+                    after:duration-300
+                    after:scale-x-0
+                    after:origin-left
+    ${isActive ? "after:scale-x-100" : ""}
+                    `
+                    }
+                  >
+                    <span className="mr-2">01</span> DESTINATION
+                  </NavLink>
                 </li>
-                <li className="before:content-['02'] before:mr-2 cursor-pointer">
-                  <Link to={"/Crew"}>Crew</Link>
+
+                <li>
+                  <NavLink
+                    to="/Crew"
+                    className={({ isActive }) =>
+                      `relative inline-block px-1 py-2
+                    after:content-['']
+                    after:block
+                    after:w-full
+                    after:h-[2px]
+                    after:absolute
+                    after:bottom-[-3px]
+                  after:bg-white
+                    after:transition-all
+                    after:duration-300
+                    after:scale-x-0
+                    after:origin-left
+    ${isActive ? "after:scale-x-100" : ""}
+                    `
+                    }
+                  >
+                    <span className="mr-2">02</span> CREW
+                  </NavLink>
                 </li>
-                <li className="before:content-['03'] before:mr-2 cursor-pointer">
-                  <Link to={"/Technology"}>Technology</Link>
+
+                <li>
+                  <NavLink
+                    to="/Technology"
+                    className={({ isActive }) =>
+                      `relative inline-block px-1 py-2
+                    after:content-['']
+                    after:block
+                    after:w-full
+                    after:h-[2px]
+                    after:absolute
+                    after:bottom-[-3px]
+                  after:bg-white
+                    after:transition-all
+                    after:duration-300
+                    after:scale-x-0
+                    after:origin-left
+    ${isActive ? "after:scale-x-100" : ""}
+                    `
+                    }
+                  >
+                    <span className="mr-2">03</span> TECHNOLOGY
+                  </NavLink>
                 </li>
               </ul>
             </nav>

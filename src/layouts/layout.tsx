@@ -76,11 +76,11 @@ export const Layout = () => {
   return (
     <>
       <section
-        className={`w-full h-[140vh] lg:w-full lg:h-[140vh] md:w-full md:h-[200vh]          
+        className={`w-full bg-cover bg-no-repeat bg-center py-5
             `}
         style={{
           backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
+          backgroundAttachment: "scroll",
         }}
       >
         <div>
@@ -88,11 +88,14 @@ export const Layout = () => {
             <img
               src={logo}
               alt="website logo"
-              className="w-[40px] h-[40px] mt-10 mx-8 ml-10 lg:mt-10 md:mt-2"
+              className="w-[40px] h-[40px] mt-10 mx-8 ml-10 lg:ml-15 lg:mt-10 md:mt-2"
             />
             <Navbar />
+            <div className="relative h-20">
+
+            <div className="absolute h-[0.5px] -translate-y-1/2 top-[80px] z-10 right-[650px] w-1/2 bg-white"></div>
             <div
-              className={` hidden lg:block lg:w-[38rem] md:block md:w-[39rem] md:mt-0 h-20 lg:mt-10 float-right ${
+              className={` hidden lg:block lg:w-[44rem] md:block md:w-[39rem] md:mt-0 h-20 lg:mt-10 float-right  ${
                 location.pathname === "/"
                   ? `backdrop-blur-2xl  `
                   : location.pathname === "/Home"
@@ -109,18 +112,19 @@ export const Layout = () => {
                 `}
             >
               <nav>
-                <ul className="h-20 list-none flex items-center justify-end gap-10 mr-13">
+                <ul className="h-20 font-['BarlowCondensed'] list-none flex items-center justify-end gap-10 mr-13">
                   {/* isActive ? `border-b-2 border-white after:underline-offset-8` : `border-b-2 border-transparent` */}
-                  <NavLink
-                    to="/Home"
-                    className={({ isActive }) =>
-                      `relative
+                  <li className="tracking-widest text-[18px]">
+                    <NavLink
+                      to="/Home"
+                      className={({ isActive }) =>
+                        `relative
                     after:content-['']
                     after:block
                     after:w-full
                     after:h-[2px]
                     after:absolute
-                    after:bottom-[-27px]
+                    after:bottom-[-28px]
                   after:bg-white
                     after:transition-all
                     after:duration-300
@@ -128,22 +132,24 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                    }
-                  >
-                    <li className="before:content-['00'] before:mr-2 text-white">
-                      Home
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/Destination"
-                    className={({ isActive }) =>
-                      `relative
+                      }
+                    >
+                      <span className="mr-2 text-white font-extrabold">00</span>
+                      HOME
+                    </NavLink>
+                  </li>
+
+                  <li className="tracking-widest text-[18px]">
+                    <NavLink
+                      to="/Destination"
+                      className={({ isActive }) =>
+                        `relative
                     after:content-['']
                     after:block
                     after:w-full
                     after:h-[2px]
                     after:absolute
-                    after:bottom-[-27px]
+                    after:bottom-[-28px]
                   after:bg-white
                     after:transition-all
                     after:duration-300
@@ -151,22 +157,23 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                    }
-                  >
-                    <li className="before:content-['01'] before:mr-2 text-white">
-                      Destination
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/Crew"
-                    className={({ isActive }) =>
-                      `relative
+                      }
+                    >
+                      <span className="mr-2 text-white font-extrabold">01</span> DESTINATION
+                    </NavLink>
+                  </li>
+
+                  <li className="tracking-widest text-[18px]">
+                    <NavLink
+                      to="/Crew"
+                      className={({ isActive }) =>
+                        `relative
                     after:content-['']
                     after:block
                     after:w-full
                     after:h-[2px]
                     after:absolute
-                    after:bottom-[-27px]
+                    after:bottom-[-28px]
                   after:bg-white
                     after:transition-all
                     after:duration-300
@@ -174,22 +181,23 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                    }
-                  >
-                    <li className="before:content-['02'] before:mr-2 text-white">
-                      Crew
-                    </li>
-                  </NavLink>
-                  <NavLink
-                    to="/Technology"
-                    className={({ isActive }) =>
-                      `relative
+                      }
+                    >
+                      <span className="mr-2 text-white font-extrabold">02</span> CREW
+                    </NavLink>
+                  </li>
+
+                  <li className="tracking-widest text-[18px]">
+                    <NavLink
+                      to="/Technology"
+                      className={({ isActive }) =>
+                        `relative
                     after:content-['']
                     after:block
                     after:w-full
                     after:h-[2px]
                     after:absolute
-                    after:bottom-[-27px]
+                    after:bottom-[-28px]
                   after:bg-white
                     after:transition-all
                     after:duration-300
@@ -197,14 +205,14 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                    }
-                  >
-                    <li className="before:content-['03'] before:mr-2 text-white">
-                      Technology
-                    </li>
-                  </NavLink>
+                      }
+                    >
+                      <span className="mr-2 text-white font-extrabold">03</span> TECHNOLOGY
+                    </NavLink>
+                  </li>
                 </ul>
               </nav>
+            </div>
             </div>
           </header>
         </div>

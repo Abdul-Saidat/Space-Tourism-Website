@@ -46,18 +46,18 @@ export const Crew = () => {
 
   return (
     <>
-      <section>
-        <header className="text-xl mx-18 tracking-widest md:mx-10 mt-15 md:mt-13 lg:mt-0 lg:mx-37">
-          <span className="text-[#54575e] font-bold mr-2"> 02</span> MEET YOUR
+      <section className="py-5">
+        <header className="text-xl mx-18 md:mx-10 mt-15 md:mt-13 lg:mx-37 lg:text-[30px] tracking-[0.3rem] font-['BarlowCondensed']">
+          <span className="text-[#54575e]  font-extrabold mr-3"> 02</span> MEET YOUR
           CREW
         </header>
         <div className="flex flex-col lg:flex-row lg:w-[950px] mx-auto">
           {/* for the content */}
           <section className="flex flex-col mt-18 gap-20 md:gap-20 text-center mx-auto md:mt-[60px] lg:mt-0 lg:gap-0 lg:text-left lg:justify-around">
             <div className="flex flex-col gap-3 w-[350px] md:w-[550px] lg:w-[500px] lg:mt-[150px] lg:mr-15">
-              <p className="text-[#5f606e] text-2xl">{content.role}</p>
-              <span className="text-4xl">{content.name}</span>
-              <p className="leading-7">{content.bio}</p>
+              <p className="text-[#5f606e] text-2xl font-['Bellefair']">{content.role}</p>
+              <span className="text-4xl font-['Bellefair']">{content.name}</span>
+              <p className="leading-loose font-['Barlow']">{content.bio}</p>
             </div>
             <div className="mx-auto">
               <ul className="flex justify-evenly w-[150px] h-[50px]">
