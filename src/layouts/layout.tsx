@@ -84,11 +84,11 @@ export const Layout = () => {
         }}
       >
         <div>
-          <header className="w-full flex justify-between items-center ">
+          <header className="w-full flex md:justify-between md:items-center ">
             <img
               src={logo}
               alt="website logo"
-              className="w-[40px] h-[40px] mt-10 mx-8 ml-10 lg:ml-15 lg:mt-10 md:mt-2"
+              className="w-[50px] h-[50px] mt-10 mx-8 ml-10 lg:ml-15 lg:mt-20 md:mt-2"
             />
             <Navbar />
             <div className="relative h-20">
@@ -101,11 +101,11 @@ export const Layout = () => {
                   : location.pathname === "/Home"
                   ? ` lg:backdrop-blur-2xl lg:bg-transparent md:bg-[#191c27] `
                   : location.pathname === "/Crew"
-                  ? "backdrop-blur-3xl bg-[#252831]"
+                  ? "backdrop-blur-3xl bg-transparent"
                   : location.pathname === "/Destination"
-                  ? "backdrop-blur-lg bg-[#282a37]"
+                  ? "backdrop-blur-2xl bg-transparent"
                   : location.pathname === "/Technology"
-                  ? "backdrop-blur-lg bg-[#1d1d29]"
+                  ? "backdrop-blur-3xl bg-[#1e1f2b]"
                   : ""
               }
                 

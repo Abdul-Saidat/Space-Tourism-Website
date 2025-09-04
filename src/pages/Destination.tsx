@@ -56,7 +56,7 @@ export const Destination = () => {
 
   return (
     <>
-      <section>
+      <section className="lg:py-20">
         <header className="text-center text-xl md:text-left lg:mx-[170px] md:mx-10 my-[50px] lg:text-[30px] tracking-[0.3rem] font-['BarlowCondensed']">
           <span className=" text-[#454751] font-extrabold tracking-normal mr-5">
             01

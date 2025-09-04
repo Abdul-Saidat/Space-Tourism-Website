@@ -56,7 +56,7 @@ export const Technology = () => {
   const content = data[activeIndex];
   return (
     <>
-      <section className="lg:py-10">
+      <section className="lg:py-25">
         <header className="text-xl mx-15 mt-15 md:mx-15  lg:mt-0 lg:mx-35 lg:text-[30px] tracking-[0.3rem] font-['BarlowCondensed']">
           <span className="text-[#454751] font-extrabold mr-3"> 03</span> SPACE LAUNCH 101
         </header>

@@ -18,15 +18,15 @@ export const Navbar = () => {
         {!isOpen && (
           <button className="" onClick={handleClick}>
             <img
-              src={Hamburger}
-              className="w-[28px] relative right-10 top-6"
+              src={Hamburger} 
+              className="mt-11 ml-53"
               alt="menu"
             />
           </button>
         )}
         {isOpen && (
-          <div className="z-50 w-[250px] h-[1050px] absolute mt-[-39px] right-[0px] text-white backdrop-blur-2xl">
-            <button className="absolute top-6 right-4" onClick={handleClose}>
+          <div className="z-50 w-[250px] fixed top-0 right-0 h-screen mt-0  text-white backdrop-blur-2xl">
+            <button className="absolute top-6 right-10" onClick={handleClose}>
               <img src={closebtn} alt="close-button" />
             </button>
 
