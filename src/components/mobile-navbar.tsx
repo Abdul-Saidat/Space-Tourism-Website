@@ -31,7 +31,7 @@ export const Navbar = () => {
             </button>
 
             <nav>
-              <ul className=" flex flex-col gap-4 mt-[150px] ml-10 font-['BarlowCondensed'] tracking-widest">
+              <ul className=" flex flex-col gap-4 mt-[150px] text-xl ml-10 font-['BarlowCondensed'] tracking-widest">
                 <li>
                   <NavLink
                     to="/Home"
@@ -53,7 +53,7 @@ export const Navbar = () => {
                     `
                     }
                   >
-                    <span className="mr-2">00</span> HOME
+                    <span className="mr-2 font-extrabold">00</span> HOME
                   </NavLink>
                 </li>
                 <li>
@@ -76,7 +76,7 @@ export const Navbar = () => {
                     `
                     }
                   >
-                    <span className="mr-2">01</span> DESTINATION
+                    <span className="mr-2 font-extraboldt-">01</span> DESTINATION
                   </NavLink>
                 </li>
 
@@ -100,7 +100,7 @@ export const Navbar = () => {
                     `
                     }
                   >
-                    <span className="mr-2">02</span> CREW
+                    <span className="mr-2 font-extrabold">02</span> CREW
                   </NavLink>
                 </li>
 
@@ -124,7 +124,7 @@ export const Navbar = () => {
                     `
                     }
                   >
-                    <span className="mr-2">03</span> TECHNOLOGY
+                    <span className="mr-2 font-extrabold">03</span> TECHNOLOGY
                   </NavLink>
                 </li>
               </ul>
