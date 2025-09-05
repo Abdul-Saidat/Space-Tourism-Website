@@ -3,6 +3,13 @@ import hamburger from "../assets/icon-hamburger.svg";
 import closebtn from "../assets/icon-close.svg";
 import { NavLink } from "react-router-dom";
 
+// interface NavbarProps {
+//   className: string;
+//   isOpen: boolean;
+//   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+//   handleClick: () => void
+// }
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const Hamburger = hamburger;
@@ -15,15 +22,13 @@ export const Navbar = () => {
   return (
     <>
       <div className="relative md:hidden">
-        {!isOpen && (
-          <button className="" onClick={handleClick}>
-            <img
-              src={Hamburger} 
-              className="mt-11 ml-53"
-              alt="menu"
-            />
-          </button>
-        )}
+        <div className=" z-50  md:hidden">
+          {!isOpen && (
+            <button className="" onClick={handleClick}>
+              <img src={Hamburger} className="" alt="menu" />
+            </button>
+          )}
+        </div>
         {isOpen && (
           <div className="z-50 w-[250px] fixed top-0 right-0 h-screen mt-0  text-white backdrop-blur-2xl">
             <button className="absolute top-6 right-10" onClick={handleClose}>

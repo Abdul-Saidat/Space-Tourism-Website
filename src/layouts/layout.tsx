@@ -84,41 +84,41 @@ export const Layout = () => {
         }}
       >
         <div>
-          <header className="w-full flex md:justify-between md:items-center ">
+          <header className="w-full py-4  relative  flex justify-between items-center ">
             <img
               src={logo}
               alt="website logo"
-              className="w-[50px] h-[50px] mt-10 mx-8 ml-10 lg:ml-15 lg:mt-20 md:mt-2"
+              className="w-[50px] h-[50px] lg:mt-15 lg:ml-15 ml-7"
             />
-            <Navbar />
+            <div className="absolute right-10">
+              <Navbar />
+            </div>
             <div className="relative h-20">
-
-            <div className="absolute h-[0.5px] -translate-y-1/2 top-[80px] z-10 right-[650px] w-1/2 bg-white"></div>
-            <div
-              className={` hidden lg:block lg:w-[44rem] md:block md:w-[39rem] md:mt-0 h-20 lg:mt-10 float-right  ${
-                location.pathname === "/"
-                  ? `backdrop-blur-2xl  `
-                  : location.pathname === "/Home"
-                  ? ` lg:backdrop-blur-2xl lg:bg-transparent md:bg-[#191c27] `
-                  : location.pathname === "/Crew"
-                  ? "backdrop-blur-3xl bg-transparent"
-                  : location.pathname === "/Destination"
-                  ? "backdrop-blur-2xl bg-transparent"
-                  : location.pathname === "/Technology"
-                  ? "backdrop-blur-3xl bg-[#1e1f2b]"
-                  : ""
-              }
+              <div className="absolute h-[0.5px] -translate-y-1/2 top-[80px] z-50 right-[650px] w-1/2 bg-white md:hidden lg:block"></div>
+              <div
+                className={` hidden lg:block lg:w-[44rem] md:block md:w-[39rem] md:mt-0 h-20 lg:mt-10 float-right  ${
+                  location.pathname === "/"
+                    ? `backdrop-blur-2xl  `
+                    : location.pathname === "/Home"
+                    ? ` lg:backdrop-blur-2xl lg:bg-transparent md:bg-[#191c27] `
+                    : location.pathname === "/Crew"
+                    ? "backdrop-blur-3xl bg-transparent"
+                    : location.pathname === "/Destination"
+                    ? "backdrop-blur-2xl bg-transparent"
+                    : location.pathname === "/Technology"
+                    ? "backdrop-blur-3xl bg-[#1e1f2b]"
+                    : ""
+                }
                 
                 `}
-            >
-              <nav>
-                <ul className="h-20 font-['BarlowCondensed'] list-none flex items-center justify-end gap-10 mr-13">
-                  {/* isActive ? `border-b-2 border-white after:underline-offset-8` : `border-b-2 border-transparent` */}
-                  <li className="tracking-widest text-[18px]">
-                    <NavLink
-                      to="/Home"
-                      className={({ isActive }) =>
-                        `relative
+              >
+                <nav>
+                  <ul className="h-20 font-['BarlowCondensed'] list-none flex items-center justify-end gap-10 mr-13">
+                    <li className="tracking-widest text-[18px]">
+                      <NavLink
+                        to="/Home"
+                        className={({ isActive }) =>
+                          `relative
                     after:content-['']
                     after:block
                     after:w-full
@@ -132,18 +132,20 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                      }
-                    >
-                      <span className="mr-2 text-white font-extrabold">00</span>
-                      HOME
-                    </NavLink>
-                  </li>
+                        }
+                      >
+                        <span className="mr-2 text-white font-extrabold">
+                          00
+                        </span>
+                        HOME
+                      </NavLink>
+                    </li>
 
-                  <li className="tracking-widest text-[18px]">
-                    <NavLink
-                      to="/Destination"
-                      className={({ isActive }) =>
-                        `relative
+                    <li className="tracking-widest text-[18px]">
+                      <NavLink
+                        to="/Destination"
+                        className={({ isActive }) =>
+                          `relative
                     after:content-['']
                     after:block
                     after:w-full
@@ -157,17 +159,20 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                      }
-                    >
-                      <span className="mr-2 text-white font-extrabold">01</span> DESTINATION
-                    </NavLink>
-                  </li>
+                        }
+                      >
+                        <span className="mr-2 text-white font-extrabold">
+                          01
+                        </span>{" "}
+                        DESTINATION
+                      </NavLink>
+                    </li>
 
-                  <li className="tracking-widest text-[18px]">
-                    <NavLink
-                      to="/Crew"
-                      className={({ isActive }) =>
-                        `relative
+                    <li className="tracking-widest text-[18px]">
+                      <NavLink
+                        to="/Crew"
+                        className={({ isActive }) =>
+                          `relative
                     after:content-['']
                     after:block
                     after:w-full
@@ -181,17 +186,20 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                      }
-                    >
-                      <span className="mr-2 text-white font-extrabold">02</span> CREW
-                    </NavLink>
-                  </li>
+                        }
+                      >
+                        <span className="mr-2 text-white font-extrabold">
+                          02
+                        </span>{" "}
+                        CREW
+                      </NavLink>
+                    </li>
 
-                  <li className="tracking-widest text-[18px]">
-                    <NavLink
-                      to="/Technology"
-                      className={({ isActive }) =>
-                        `relative
+                    <li className="tracking-widest text-[18px]">
+                      <NavLink
+                        to="/Technology"
+                        className={({ isActive }) =>
+                          `relative
                     after:content-['']
                     after:block
                     after:w-full
@@ -205,14 +213,17 @@ export const Layout = () => {
                     after:origin-left
     ${isActive ? "after:scale-x-100" : ""}
                     `
-                      }
-                    >
-                      <span className="mr-2 text-white font-extrabold">03</span> TECHNOLOGY
-                    </NavLink>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+                        }
+                      >
+                        <span className="mr-2 text-white font-extrabold">
+                          03
+                        </span>{" "}
+                        TECHNOLOGY
+                      </NavLink>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </header>
         </div>
